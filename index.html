@@ -19,7 +19,13 @@
             --text-color: #e6e6e6;
             --text-muted: #adb5bd;
         }
-        
+        // Rewarded interstitial
+
+show_10084358().then(() => {
+    // You need to add your user reward function here, which will be executed after the user watches the ad.
+    // For more details, please refer to the detailed instructions.
+    alert('You have seen an ad!');
+})
         * {
             box-sizing: border-box;
             margin: 0;
@@ -506,7 +512,7 @@
                 <div class="user-avatar" id="user-avatar">U</div>
                 <div class="user-info">
                     <h3 id="user-name">ব্যবহারকারী</h3>
-                    <p>আইডি: <span id="user-id">12345</span></p>
+                    <p>আইডি: <span id="user-id">20251</span></p>
                 </div>
             </div>
             
@@ -524,7 +530,7 @@
             <div class="progress-container">
                 <div class="progress-header">
                     <h3>আজকের অগ্রগতি</h3>
-                    <span id="ads-progress">0/10</span>
+                    <span id="ads-progress">0/20</span>
                 </div>
                 <div class="progress-bar">
                     <div class="progress-fill" id="progress-fill"></div>
@@ -808,7 +814,7 @@
                 // Check if this is first visit and not already referred
                 if (!localStorage.getItem('referredBy')) {
                     localStorage.setItem('referredBy', referrerId);
-                    showNotification('আপনি একটি রেফারেল লিঙ্ক ব্যবহার করে যোগদান করেছেন! রেফারার ৫ টাকা বোনাস পাবেন।', 'success');
+                    showNotification('আপনি একটি রেফারেল লিঙ্ক ব্যবহার করে যোগদান করেছেন! রেফারার 1 টাকা বোনাস পাবেন।', 'success');
                     
                     // In a real app, you would send this to your backend
                     setTimeout(() => {
@@ -1156,5 +1162,6 @@
     </script>
 </body>
 </html>
+
 
 
