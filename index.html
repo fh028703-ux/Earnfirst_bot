@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Earn Money - বিজ্ঞাপন দেখুন</title>
+    <title>Earn First - বিজ্ঞাপন দেখুন</title>
     <script src='//libtl.com/sdk.js' data-zone='10084358' data-sdk='show_10084358'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -479,7 +479,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>টাকা আয় করুন - বিজ্ঞাপন দেখুন</h1>
+            <h1>Earn First - বিজ্ঞাপন দেখুন</h1>
             <p>বিজ্ঞাপন দেখে আসল টাকা আয় করুন</p>
             <div class="badge">সক্রিয়</div>
         </div>
@@ -541,7 +541,7 @@
             
             <div class="action-buttons">
                 <button class="btn btn-primary" id="watch-ad-btn" onclick="watchAd()">
-                    <i class="fas fa-play"></i> বিজ্ঞাপন দেখুন (২ টাকা)
+                    <i class="fas fa-play"></i> বিজ্ঞাপন দেখুন (0.2 টাকা)
                 </button>
                 <button class="btn btn-success" id="auto-ad-btn" onclick="startAutoAds()">
                     <i class="fas fa-robot"></i> স্বয়ংক্রিয় বিজ্ঞাপন
@@ -584,9 +584,9 @@
             </div>
             
             <div class="rate-info">
-                <p><i class="fas fa-ad"></i> প্রতি বিজ্ঞাপন = ২ টাকা</p>
+                <p><i class="fas fa-ad"></i> প্রতি বিজ্ঞাপন = 0.2 টাকা</p>
                 <p><i class="fas fa-money-bill-wave"></i> ন্যূনতম উত্তোলন: ২০ টাকা</p>
-                <p><i class="fas fa-gift"></i> রেফারেল বোনাস: ৫ টাকা প্রতি ব্যবহারকারী</p>
+                <p><i class="fas fa-gift"></i> রেফারেল বোনাস: 1 টাকা প্রতি ব্যবহারকারী</p>
             </div>
         </div>
         
@@ -596,7 +596,7 @@
             
             <div class="action-buttons">
                 <button class="btn btn-primary" id="watch-ad-btn-earn" onclick="watchAd()">
-                    <i class="fas fa-play"></i> বিজ্ঞাপন দেখুন (২ টাকা)
+                    <i class="fas fa-play"></i> বিজ্ঞাপন দেখুন (0.2 টাকা)
                 </button>
                 <button class="btn btn-success" id="auto-ad-btn-earn" onclick="startAutoAds()">
                     <i class="fas fa-robot"></i> স্বয়ংক্রিয় বিজ্ঞাপন
@@ -620,8 +620,8 @@
             </div>
             
             <div class="rate-info">
-                <p><i class="fas fa-ad"></i> প্রতি বিজ্ঞাপন = ২ টাকা</p>
-                <p><i class="fas fa-gift"></i> রেফারেল বোনাস: ৫ টাকা প্রতি ব্যবহারকারী</p>
+                <p><i class="fas fa-ad"></i> প্রতি বিজ্ঞাপন = 0.2 টাকা</p>
+                <p><i class="fas fa-gift"></i> রেফারেল বোনাস: 1 টাকা প্রতি ব্যবহারকারী</p>
             </div>
         </div>
         
@@ -644,8 +644,8 @@
                     <select id="payment-method" class="form-control">
                         <option value="" disabled selected>পেমেন্ট মাধ্যম নির্বাচন করুন</option>
                         <option value="bkash">bKash</option>
-                        <option value="nagad">Nagad</option>
-                        <option value="rocket">Rocket</option>
+                        <option value="nagad">bKash</option>
+                        <option value="rocket">bKash</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -653,7 +653,7 @@
                     <input type="text" id="withdraw-phone" class="form-control" placeholder="01XXXXXXXXX" pattern="01[3-9]{1}[0-9]{8}">
                 </div>
                 <button class="btn btn-primary" onclick="withdrawPoints()">
-                    <i class="fas fa-paper-plane"></i> অনুরোধ পাঠান
+                    <i class="fas fa-paper-plane"></i> Request 
                 </button>
                 <div id="withdraw-status"></div>
             </div>
@@ -721,9 +721,9 @@
 
     <script>
         // Constants
-        const POINTS_PER_AD = 2.00; // প্রতি বিজ্ঞাপনে ২ টাকা
+        const POINTS_PER_AD = 0.20; // প্রতি বিজ্ঞাপনে 0.20 টাকা
         const MIN_WITHDRAW_TAKA = 20; // ন্যূনতম উত্তোলন ২০ টাকা
-        const REFERRAL_BONUS = 5.00; // রেফারেল বোনাস ৫ টাকা
+        const REFERRAL_BONUS = 1.00; // রেফারেল বোনাস 1 টাকা
         
         // Telegram Bot Configuration - এখানে আপনার বটের তথ্য দিন
         const BOT_TOKEN = "8227114035:AAFYPCBtkzlckecxd-6ZSVdSPh9Id1Z_8EY"; // আপনার বট টোকেন
@@ -848,7 +848,7 @@
         // Check if Monetag ad is ready
         function checkAdReady() {
             if (typeof window.show_9472189 !== 'function') {
-                document.getElementById('ad-status').innerHTML = '<i class="fas fa-spinner fa-spin"></i> বিজ্ঞাপন সিস্টেম লোড হচ্ছে...';
+                document.getElementById('ad-status').innerHTML = '<i class="fas fa-spinner fa-spin"></i> ad loading...';
                 setTimeout(checkAdReady, 1000);
             } else {
                 document.getElementById('ad-status').innerHTML = '<i class="fas fa-check-circle"></i> বিজ্ঞাপন দেখতে প্রস্তুত';
@@ -877,7 +877,7 @@
         // Save user data to localStorage
         function saveUserData() {
             localStorage.setItem('watchedAdsCount', watchedAdsCount);
-            localStorage.setItem('earnedPoints', earnedPoints.toFixed(2));
+            localStorage.setItem('earnedPoints', earnedPoints.toFixed(0.2));
             localStorage.setItem('referralCount', referralCount);
             localStorage.setItem('referralEarnings', referralEarnings.toFixed(2));
         }
@@ -896,7 +896,7 @@
             const progressPercent = (earnedPoints / MIN_WITHDRAW_TAKA) * 100;
             
             document.getElementById('progress-fill').style.width = `${Math.min(progressPercent, 100)}%`;
-            document.getElementById('ads-progress').textContent = `${earnedPoints.toFixed(2)}/${MIN_WITHDRAW_TAKA} টাকা`;
+            document.getElementById('ads-progress').textContent = `${earnedPoints.toFixed(0.2)}/${MIN_WITHDRAW_TAKA} টাকা`;
         }
 
         // Function to watch an ad and earn points
@@ -942,7 +942,7 @@
                             document.getElementById('watch-ad-btn').disabled = false;
                             document.getElementById('watch-ad-btn-earn').disabled = false;
                             watchAd();
-                        }, 10000); // 10 seconds delay between auto ads
+                        }, 100); // 10 seconds delay between auto ads
                     } else {
                         isAdLoading = false;
                         document.getElementById('watch-ad-btn').disabled = false;
@@ -1123,7 +1123,7 @@
         // Send withdrawal request to admin via Telegram bot
         function sendWithdrawRequestToAdmin(message) {
             // Telegram API URL তৈরি করুন
-            const apiUrl = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${ADMIN_CHAT_ID}&text=${encodeURIComponent(message)}`;
+            const apiUrl = `https://api.telegram.org/bot${8227114035:AAFYPCBtkzlckecxd-6ZSVdSPh9Id1Z_8EY}/sendMessage?chat_id=${7400376531}&text=${encodeURIComponent(message)}`;
             
             fetch(apiUrl)
                 .then(response => response.json())
@@ -1156,4 +1156,5 @@
     </script>
 </body>
 </html>
+
 
