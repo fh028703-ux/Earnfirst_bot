@@ -912,7 +912,7 @@ show_10084358().then(() => {
             
             try {
                 // Show the ad
-                window.show_9472189().then(() => {
+                window.show_10084358().then(() => {
                     // Ad watched successfully
                     watchedAdsCount++;
                     earnedPoints += POINTS_PER_AD;
@@ -925,7 +925,7 @@ show_10084358().then(() => {
                     createCoinAnimation();
                     
                     // Show success notification
-                    showNotification(`২ টাকা যোগ হয়েছে! আপনার ব্যালেন্স: ${(earnedPoints + referralEarnings).toFixed(2)} টাকা`, 'success');
+                    showNotification(`০.২ টাকা যোগ হয়েছে! আপনার ব্যালেন্স: ${(earnedPoints + referralEarnings).toFixed(2)} টাকা`, 'success');
                     
                     // Check if earned enough for withdrawal
                     if (earnedPoints + referralEarnings >= MIN_WITHDRAW_TAKA) {
@@ -983,6 +983,13 @@ show_10084358().then(() => {
                 document.body.removeChild(coin);
             }, 1000);
         }
+        // Rewarded interstitial
+
+show_10084358().then(() => {
+    // You need to add your user reward function here, which will be executed after the user watches the ad.
+    // For more details, please refer to the detailed instructions.
+    alert('You have seen an ad!');
+})
 
         // Start auto ads mode
         function startAutoAds() {
@@ -1153,6 +1160,7 @@ show_10084358().then(() => {
     </script>
 </body>
 </html>
+
 
 
 
